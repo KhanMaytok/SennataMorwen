@@ -1,0 +1,134 @@
+﻿namespace = ACS
+
+ACS.0001 = {
+    scope = none
+	hidden = yes
+
+    trigger = {
+        NOT = {
+            has_global_variable = spawned_warframes
+        }
+    }
+
+	immediate = {
+        set_global_variable = {
+			name = spawned_warframes
+			value = yes
+		}
+
+        # First
+        random_province = {
+            save_scope_as = random_province_1
+        }
+        create_character = {
+			location = scope:random_province_1
+			template = warframe_character_template
+			save_scope_as = new_commander_1
+		}
+		
+		scope:new_commander_1 = {
+            spawn_army = {
+                name = "Hyldrin"
+                men_at_arms = {
+                    type = acs_first_unit
+                    stacks = 1
+                }
+                location = scope:random_province_1
+                origin = scope:random_province_1
+                inheritable = yes
+            }
+		}
+
+        # First
+        random_province = {
+            save_scope_as = random_province_1
+        }
+        create_character = {
+			location = scope:random_province_1
+			template = warframe_character_template
+			save_scope_as = new_commander_1
+		}
+		
+		scope:new_commander_1 = {
+            spawn_army = {
+                name = "Hyldrin"
+                men_at_arms = {
+                    type = acs_first_unit
+                    stacks = 1
+                }
+                location = scope:random_province_1
+                origin = scope:random_province_1
+                inheritable = yes
+            }
+		}
+
+        # First
+        random_province = {
+            save_scope_as = random_province_1
+        }
+        create_character = {
+			location = scope:random_province_1
+			template = warframe_character_template
+			save_scope_as = new_commander_1
+		}
+		
+		scope:new_commander_1 = {
+            spawn_army = {
+                name = "Hyldrin"
+                men_at_arms = {
+                    type = acs_first_unit
+                    stacks = 1
+                }
+                location = scope:random_province_1
+                origin = scope:random_province_1
+                inheritable = yes
+            }
+		}
+
+        # First
+        random_province = {
+            save_scope_as = random_province_1
+        }
+        create_character = {
+			location = scope:random_province_1
+			template = warframe_character_template
+			save_scope_as = new_commander_1
+		}
+		
+		scope:new_commander_1 = {
+            spawn_army = {
+                name = "Hyldrin"
+                men_at_arms = {
+                    type = acs_first_unit
+                    stacks = 1
+                }
+                location = scope:random_province_1
+                origin = scope:random_province_1
+                inheritable = yes
+            }
+		}
+
+        # First
+        random_province = {
+            save_scope_as = random_province_1
+        }
+        create_character = {
+			location = scope:random_province_1
+			template = warframe_character_template
+			save_scope_as = new_commander_1
+		}
+		
+		scope:new_commander_1 = {
+            spawn_army = {
+                name = "Hyldrin"
+                men_at_arms = {
+                    type = acs_first_unit
+                    stacks = 1
+                }
+                location = scope:random_province_1
+                origin = scope:random_province_1
+                inheritable = yes
+            }
+		}
+    }
+}

@@ -1,0 +1,129 @@
+﻿si_landing_war = {
+	group = event
+	
+	imprisonment_by_defender_give_war_score = no
+	
+	transfer_behavior = transfer
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+	
+	target_titles = all
+	target_title_tier = county
+	target_de_jure_regions_above = yes
+	
+	war_name = "SI_LANDING_WAR_NAME"
+	my_war_name = "SI_LANDING_WAR_NAME"
+	war_name_base = "INVASION_WAR_NAME_BASE"
+	
+	on_victory_desc = si_landing_war_victory_desc
+	
+	on_victory = {
+		# Set land acquisition type to conquest.
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+		
+		#Get the county
+		every_in_list = {
+			list = target_titles
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+				take_baronies = yes
+			}
+			#Populate with invaders
+			set_county_culture = scope:attacker.culture
+			set_county_faith = scope:attacker.faith
+			change_development_level = 5
+			add_county_modifier = {
+				#Band-aid solution. The dumb AI doesn't really use their event troops well, 
+				#so I have to up the levy rate in order to provide the new invaders with some starting troops
+				modifier = si_incoming_soldiers
+				years = 10
+			}
+		}
+
+		scope:attacker = {
+			give_nickname = nick_the_conqueror
+			every_courtier_or_guest = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			death = {
+				death_reason = death_disappearance
+			}			
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		#No truce
+	}
+	
+	on_white_peace_desc = si_landing_war_white_peace_desc
+	
+	on_white_peace = {
+		#Truce because invaders got humiliated
+		add_truce_white_peace_effect = yes
+
+		#Humiliation
+		scope:attacker = {
+			add_prestige = {
+				value = major_prestige_value
+				multiply = -1.0
+			}
+		}
+		
+		#Defender prestige
+		scope:defender = {
+			add_prestige = major_prestige_value
+		}
+		
+		
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = major_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+	}
+	
+	on_defeat_desc = si_landing_war_defeat_desc
+	
+	on_defeat = {
+		#TODO: End expansionist period
+		
+		add_truce_attacker_defeat_effect = yes
+		
+		#Greater humiliation
+		scope:attacker = {
+			add_prestige = {
+				value = major_prestige_value
+				multiply = -2.5
+			}
+		}
+		#Defender prestige
+		scope:defender = {
+			add_prestige = major_prestige_value
+		}
+		
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = major_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+	}
+	
+	on_invalidated_desc = si_landing_war_invalidate_desc
+	
+	on_declaration = {
+		on_declared_war = yes
+	}
+}

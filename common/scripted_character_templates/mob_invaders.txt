@@ -1,0 +1,139 @@
+nahua_invader_commander_template = {
+	age = { 35 65 }
+	gender = male
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+	
+	martial = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+	
+	prowess = { #They are beefcakes
+		10
+		25
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_3 = {
+			weight = { base = 50 }
+		}
+		education_martial_4 = {
+			weight = { base = 40 }
+		}
+	}
+	
+	random_traits_list = {
+		count = 2
+		logistician = {}
+		flexible_leader = {}
+		forder = {}
+		jungle_stalker = {}
+		holy_warrior = {}
+		organizer = {}
+	}
+}
+
+nahua_invader_soldier_template = {
+	age = { 18 35 }
+	gender = male
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+	
+	martial = {
+		min_template_decent_skill
+		max_template_high_skill
+	}
+	
+	prowess = { #Total beefcakes
+		10
+		30
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_1 = {
+			weight = { base = 30 }
+		}
+		education_martial_2 = {
+			weight = { base = 30 }
+		}
+		education_martial_3 = {
+			weight = { base = 30 }
+		}
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_prowess_1 = {
+			weight = { base = 20 }
+		}
+		education_martial_prowess_1 = {
+			weight = { base = 30 }
+		}
+		education_martial_prowess_1 = {
+			weight = { base = 30 }
+		}
+		education_martial_prowess_1 = {
+			weight = { base = 20 }
+		}
+	}
+}
+
+
+nahua_invader_male_courtier_template = {
+	age = { 15 40 }
+	gender = male
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+}
+
+nahua_invader_female_courtier_template = {
+	age = { 15 40 }
+	gender = female
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+}
+
+warframe_character_template = {
+	age = { 35 65 }
+	gender = female
+	faith = faith:old_gods
+	culture = culture:iliac
+	
+	martial = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+	
+	prowess = { #They are beefcakes
+		10
+		25
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_3 = {
+			weight = { base = 50 }
+		}
+		education_martial_4 = {
+			weight = { base = 40 }
+		}
+	}
+	
+	random_traits_list = {
+		count = 2
+		logistician = {}
+		flexible_leader = {}
+		forder = {}
+		jungle_stalker = {}
+		holy_warrior = {}
+		organizer = {}
+	}
+
+	trait = lifespan_5
+}
+
+
+

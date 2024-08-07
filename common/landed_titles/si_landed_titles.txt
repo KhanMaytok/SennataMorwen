@@ -1,0 +1,10 @@
+﻿e_nahua = {
+	color={ 255 111 0 }
+	color2={ 0 0 0 }
+	
+	landless = yes
+	no_automatic_claims = yes
+	can_create = { always = no }
+	
+	capital = c_vathmora
+}
