@@ -1,4 +1,4 @@
-nahua_invader_commander_template = {
+﻿nahua_invader_commander_template = {
 	age = { 35 65 }
 	gender = male
 	faith = faith:mehrunes_cult
@@ -133,7 +133,5 @@ warframe_character_template = {
 	}
 
 	trait = lifespan_5
+	trait = dragon_rider
 }
-
-
-

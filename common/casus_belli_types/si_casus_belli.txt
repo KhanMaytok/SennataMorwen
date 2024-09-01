@@ -47,17 +47,7 @@
 			}
 		}
 
-		scope:attacker = {
-			give_nickname = nick_the_conqueror
-			every_courtier_or_guest = {
-				death = {
-					death_reason = death_disappearance
-				}
-			}
-			death = {
-				death_reason = death_disappearance
-			}			
-		}
+		scope:attacker = { give_nickname = nick_the_conqueror }
 
 		resolve_title_and_vassal_change = scope:change
 

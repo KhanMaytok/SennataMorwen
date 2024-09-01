@@ -16,119 +16,112 @@ ACS.0001 = {
 			value = yes
 		}
 
-        # First
-        random_province = {
-            save_scope_as = random_province_1
-        }
-        create_character = {
-			location = scope:random_province_1
-			template = warframe_character_template
-			save_scope_as = new_commander_1
-		}
-		
-		scope:new_commander_1 = {
-            spawn_army = {
-                name = "Hyldrin"
-                men_at_arms = {
-                    type = acs_first_unit
-                    stacks = 1
-                }
-                location = scope:random_province_1
-                origin = scope:random_province_1
-                inheritable = yes
-            }
-		}
-
-        # First
-        random_province = {
-            save_scope_as = random_province_1
-        }
-        create_character = {
-			location = scope:random_province_1
-			template = warframe_character_template
-			save_scope_as = new_commander_1
-		}
-		
-		scope:new_commander_1 = {
-            spawn_army = {
-                name = "Hyldrin"
-                men_at_arms = {
-                    type = acs_first_unit
-                    stacks = 1
-                }
-                location = scope:random_province_1
-                origin = scope:random_province_1
-                inheritable = yes
-            }
-		}
-
-        # First
-        random_province = {
-            save_scope_as = random_province_1
-        }
-        create_character = {
-			location = scope:random_province_1
-			template = warframe_character_template
-			save_scope_as = new_commander_1
-		}
-		
-		scope:new_commander_1 = {
-            spawn_army = {
-                name = "Hyldrin"
-                men_at_arms = {
-                    type = acs_first_unit
-                    stacks = 1
-                }
-                location = scope:random_province_1
-                origin = scope:random_province_1
-                inheritable = yes
-            }
-		}
-
-        # First
-        random_province = {
-            save_scope_as = random_province_1
-        }
-        create_character = {
-			location = scope:random_province_1
-			template = warframe_character_template
-			save_scope_as = new_commander_1
-		}
-		
-		scope:new_commander_1 = {
-            spawn_army = {
-                name = "Hyldrin"
-                men_at_arms = {
-                    type = acs_first_unit
-                    stacks = 1
-                }
-                location = scope:random_province_1
-                origin = scope:random_province_1
-                inheritable = yes
-            }
-		}
-
-        # First
-        random_province = {
-            save_scope_as = random_province_1
-        }
-        create_character = {
-			location = scope:random_province_1
-			template = warframe_character_template
-			save_scope_as = new_commander_1
-		}
-		
-		scope:new_commander_1 = {
-            spawn_army = {
-                name = "Hyldrin"
-                men_at_arms = {
-                    type = acs_first_unit
-                    stacks = 1
-                }
-                location = scope:random_province_1
-                origin = scope:random_province_1
-                inheritable = yes
-            }
+		# GENERATE HECATE IN A LOOP
+		# THEY ARE WMD
+		while = {
+			count = 5
+			random_province = {
+				save_scope_as = acs_hecate_province
+			}
+			random_ruler = {
+				limit = {
+					NOT = { has_trait = dragon_rider }
+				}
+				add_trait = dragon_rider
+				save_scope_as = acs_hecate				
+			}
+			scope:acs_hecate = {
+				spawn_army = {
+					name = "Hyldrin"
+					men_at_arms = {
+						type = acs_first_unit
+						stacks = 1
+					}
+					location = scope:acs_hecate_province
+					origin = scope:acs_hecate_province
+					inheritable = no
+					uses_supply = no
+				}
+				while = {
+					count = 5
+					spawn_army = {
+						uses_supply = no
+						inheritable = no
+						name = "risen_dead"
+						levies = {
+							value = {
+								value = 750
+							}
+						}
+						location = scope:acs_hecate_province
+					}
+				}
+				every_player = {
+					send_interface_message = {
+						type = event_generic_bad
+						title = HECATE_FIRST_WAR_MESSAGE
+						desc = HECATE_FIRST_WAR_MESSAGE_DESC
+						right_icon = scope:acs_hecate
+					}
+				}
+			}
 		}
     }
+}
+
+ACS.0002 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		has_trait = dragon_rider
+	}
+	
+	immediate = {
+		random_province = {
+			save_scope_as = acs_hecate_province
+		}
+		random_ruler = {
+			limit = {
+				NOT = { has_trait = dragon_rider }
+			}
+			add_trait = dragon_rider
+			save_scope_as = acs_hecate				
+		}
+		scope:acs_hecate = {
+			spawn_army = {
+				name = "Hyldrin"
+				men_at_arms = {
+					type = acs_first_unit
+					stacks = 1
+				}
+				location = scope:acs_hecate_province
+				origin = scope:acs_hecate_province
+				inheritable = no
+				uses_supply = no
+			}
+			while = {
+				count = 5
+				spawn_army = {
+					uses_supply = no
+					inheritable = no
+					name = "risen_dead"
+					levies = {
+					value = {
+							value = 750
+						}
+					}
+					location = scope:acs_hecate_province
+				}
+			}
+			every_player = {
+				send_interface_message = {
+					type = event_generic_bad
+					title = HECATE_FIRST_WAR_MESSAGE
+					desc = HECATE_FIRST_WAR_MESSAGE_DESC
+					right_icon = scope:acs_hecate
+				}
+			}
+		}
+	}
 }
