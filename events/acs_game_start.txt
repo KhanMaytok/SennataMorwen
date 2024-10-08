@@ -1,5 +1,6 @@
 ﻿namespace = ACS
 
+# Initial hecate spawner
 ACS.0001 = {
     scope = none
 	hidden = yes
@@ -42,20 +43,6 @@ ACS.0001 = {
 					inheritable = no
 					uses_supply = no
 				}
-				while = {
-					count = 5
-					spawn_army = {
-						uses_supply = no
-						inheritable = no
-						name = "risen_dead"
-						levies = {
-							value = {
-								value = 750
-							}
-						}
-						location = scope:acs_hecate_province
-					}
-				}
 				every_player = {
 					send_interface_message = {
 						type = event_generic_bad
@@ -69,6 +56,7 @@ ACS.0001 = {
     }
 }
 
+# The Hecate seeks another bearer immediately after the death of the current one
 ACS.0002 = {
 	type = character_event
 	hidden = yes
@@ -100,20 +88,6 @@ ACS.0002 = {
 				inheritable = no
 				uses_supply = no
 			}
-			while = {
-				count = 5
-				spawn_army = {
-					uses_supply = no
-					inheritable = no
-					name = "risen_dead"
-					levies = {
-					value = {
-							value = 750
-						}
-					}
-					location = scope:acs_hecate_province
-				}
-			}
 			every_player = {
 				send_interface_message = {
 					type = event_generic_bad
@@ -121,6 +95,32 @@ ACS.0002 = {
 					desc = HECATE_FIRST_WAR_MESSAGE_DESC
 					right_icon = scope:acs_hecate
 				}
+			}
+		}
+	}
+}
+
+# Kills every character >= 13 years old
+ACS.0003 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		is_ai = yes
+		age >= 15
+	}
+
+	immediate = {
+		every_living_character = {
+			limit = {
+				is_ai = yes
+				age >= 13
+				NOT = {
+					has_trait = dragon_rider
+				}
+			}
+			death = {
+				death_reason = death_execution
 			}
 		}
 	}

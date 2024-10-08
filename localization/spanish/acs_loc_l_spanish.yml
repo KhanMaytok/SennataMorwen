@@ -1,0 +1,9 @@
+﻿l_spanish:
+ acs_first_unit: "Hécate"
+ trait_dragon_rider: "Portador de Hécate"
+ trait_dragon_rider_desc: "Esta persona ha sido bendecida por la reina Avantika. Ahora porta una Hécate, la armadura viviente con la cual vigilará el Pacto de las ambiciones del Dios Emperador."
+ CONQUEST_DRAGON_RIDER_WAR_NAME: "Dragon Rider's Conquest of [TARGET_TITLE.GetName]"
+ CONQUEST_DRAGON_RIDER_WAR_NAME_BASE: "Dragon Rider's Conquest"
+ CONQUEST_DRAGON_RIDER_CB_NAME: "Dragon Rider Conquest"
+ HECATE_FIRST_WAR_MESSAGE: "Surge un nuevo Portador"
+ HECATE_FIRST_WAR_MESSAGE_DESC: "Surge un nuevo Portador"

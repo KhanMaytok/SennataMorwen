@@ -15,9 +15,9 @@
 
 	monthly_prestige = 2
 
-	opinion_of_liege = -75
-	glory_hound_opinion = 75
-	attraction_opinion = -10
+	opinion_of_liege = -100
+	glory_hound_opinion = 100
+	attraction_opinion = -100
 
 	stress_gain_mult = 0.99
 	dread_gain_mult = 0.99
@@ -26,7 +26,7 @@
 	ai_war_cooldown = -0.75
 	ai_war_chance = 5
 
-	health = -0.75
+	health = -0.1
 
 	ai_honor = low_negative_ai_value
 	ai_greed = very_high_positive_ai_value
