@@ -1,6 +1,6 @@
 ﻿*.txt linguist-language=Rust
-*.csv linguist-language=Erlang
-*.md linguist-language=Go
+*.yml linguist-language=Go
+*.md linguist-language=Dart
 *.gfx linguist-language=Java
 *.gui linguist-language=Haskell
 gfx/traits/* linguist-language=Julia
