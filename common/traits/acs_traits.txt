@@ -1,23 +1,19 @@
 ﻿dragon_rider = {
 	shown_in_ruler_designer = no
 	inheritance_blocker = all
+	claim_inheritance_blocker = all
+	can_have_children = no
 
 	flag = join_factions_more
 	flag = can_murder_own_children
-	flag = can_not_marry
-
-	inheritance_blocker = all
-	claim_inheritance_blocker = all
-	can_have_children = no
 
 	martial = 1
 	prowess = 50
 
-	monthly_prestige = 2
+	monthly_prestige = 10
 
 	opinion_of_liege = -100
 	glory_hound_opinion = 100
-	attraction_opinion = -100
 
 	stress_gain_mult = 0.99
 	dread_gain_mult = 0.99
