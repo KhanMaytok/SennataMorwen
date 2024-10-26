@@ -125,3 +125,122 @@ ACS.0003 = {
 		}
 	}
 }
+
+# Spawn some courtiers for shogunate
+ACS.0004 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		root = {			
+			while = {
+				count = 5
+				create_character = {
+					employer = root
+					template = maytok_shogunate_male_courtier_template
+				}
+			}
+			while = {
+				count = 5
+				create_character = {
+					employer = root
+					template = maytok_shogunate_female_courtier_template
+				}
+			}
+		}
+	}
+}
+
+# Spawn some troups
+ACS.0005 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		root = {			
+			spawn_army = {
+				name = "Busi"
+				men_at_arms = {
+					type = acs_first_unit
+					stacks = 300
+				}
+				location = root.province
+				origin = root.province
+				inheritable = no
+				uses_supply = no
+			}
+		}
+	}
+}
+
+# Shattered world
+ACS.0006 = {
+	hidden = yes
+	type = empty
+	
+	trigger = {
+		is_ai = no
+	}
+	
+	immediate = {
+		every_living_character = {
+			every_character_war = {
+				limit = { always = yes }
+				end_war = invalidated
+			}
+		}
+		every_living_character = {
+			limit = { is_imprisoned = yes }
+			release_from_prison = yes
+		}
+		every_ruler = {
+			every_ally = {
+				break_alliance = prev
+			}
+		}
+
+		every_ruler = {
+			limit = {
+				is_ai = yes
+			}
+			trigger_event = ACS.0007
+		}
+	}
+}
+
+# Shatter Down To Counties
+ACS.0007 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				OR = {
+					tier = tier_duchy 
+					tier = tier_kingdom 
+					tier = tier_empire 
+				}
+			}
+			holder = { destroy_title = prev }
+		}
+		root = {
+			shattered_world_split_exclaves = yes
+		}
+		if = {
+			limit = { has_game_rule = shatter_duchies_even }
+
+			root = {
+				shattered_world_even_counties = yes
+			}
+		}
+	}
+}

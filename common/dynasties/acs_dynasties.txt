@@ -1,0 +1,9 @@
+﻿dynasty_sakya = {
+	name = dynasty_name_sakya
+	culture = imperial_family
+}
+
+dynasty_maytok = {
+	name = dynasty_name_maytok
+	culture = imperial_family
+}

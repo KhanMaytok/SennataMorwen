@@ -135,3 +135,67 @@ warframe_character_template = {
 	trait = lifespan_5
 	trait = dragon_rider
 }
+
+maytok_shogunate_male_courtier_template = {
+	age = { 15 40 }
+	gender = male
+	dynasty = maytok
+	random_traits_list = {
+		count = 2
+		lustful = {}
+		chaste = {}
+		wrathful = {}
+		arrogant = {}
+		impatient = {}
+		humble = {}
+		calm = {}
+		patient = {}
+		gluttonous = {}
+
+	}
+	trait = stubborn
+	trait = zealous
+	trait = theologian
+		
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	after_creation = {
+		shogunate_set_fictional_nickname_effect = yes
+	}
+}
+
+maytok_shogunate_female_courtier_template = {
+	age = { 15 40 }
+	gender = female
+	dynasty = maytok
+	random_traits_list = {
+		count = 2
+		lustful = {}
+		chaste = {}
+		wrathful = {}
+		arrogant = {}
+		impatient = {}
+		humble = {}
+		calm = {}
+		patient = {}
+		gluttonous = {}
+
+	}
+	trait = stubborn
+	trait = zealous
+	trait = theologian
+		
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	after_creation = {
+		shogunate_set_fictional_nickname_effect = yes
+	}
+}

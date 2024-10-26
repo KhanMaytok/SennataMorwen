@@ -1,5 +1,6 @@
 ﻿l_english:
  acs_first_unit: "Hecate"
+ acs_second_unit: "Oushi-tai"
  trait_dragon_rider: "Hecate Bearer"
  trait_dragon_rider_desc: "This person has been blessed by Queen Avantika. She now carries a Hecate, the living armor with which she will guard the Covenant from the ambitions of the God Emperor."
  CONQUEST_DRAGON_RIDER_WAR_NAME: "Dragon Rider's Conquest of [TARGET_TITLE.GetName]"
@@ -7,3 +8,7 @@
  CONQUEST_DRAGON_RIDER_CB_NAME: "Dragon Rider Conquest"
  HECATE_FIRST_WAR_MESSAGE: "A new Bearer emerges"
  HECATE_FIRST_WAR_MESSAGE_DESC: "A new Bearer emerges"
+ dynasty_name_sakya: "Sakya"
+ dynasty_name_maytok: "Maytok"
+ sakya_culture: "Saka"
+
