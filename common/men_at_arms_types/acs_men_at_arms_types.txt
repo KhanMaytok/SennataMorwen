@@ -15,10 +15,10 @@ acs_first_unit = {
 		# this = { has_trait = dragon_rider }
 	# }
 
-	damage = 150000
-	toughness = 180000
-	pursuit = 136000
-	screen = 192000
+	damage = 150
+	toughness = 180
+	pursuit = 136
+	screen = 192
 
 	#siege_tier = 5
 	siege_value = 2.0

@@ -28,7 +28,10 @@
 	}
 	
 	on_victory = {
-		scope:attacker = { show_pow_release_message_effect = yes }
+		scope:attacker = {
+			show_pow_release_message_effect = yes
+			maimed_in_battle_effect = yes
+		}
 		
 		# Legitimacy
 		add_legitimacy_attacker_victory_effect = yes
