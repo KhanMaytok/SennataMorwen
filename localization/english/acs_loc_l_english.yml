@@ -11,4 +11,10 @@
  dynasty_name_sakya: "Sakya"
  dynasty_name_maytok: "Maytok"
  sakya_culture: "Saka"
+ hire_sennatha_decision_desc: "Invite a Sennatha Morwen"
+ hire_sennatha_decision: "Invite a Sennatha Morwen"
+ got_a_sennatha: "Illustrious visitors"
+ got_a_sennatha_desc: "The lands of this person have been visited by someone powerful in magic."
+ trait_sennatha: "Sennatha Morwen"
+ trait_sennatha_desc: "Bearer of ancient secrets and spiritual guide of an order shrouded in intrigue and mysticism, the Sennatha Morwen is not merely a leader but a living symbol of unwavering wisdom and unfathomable power. It is said that every word she speaks pulls unseen strings that bind the fate of kings and beggars alike."
 

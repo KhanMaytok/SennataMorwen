@@ -3,3 +3,9 @@
         ACS.0002
     }
 }
+
+yearly_playable_pulse = {
+    events = {
+        ACS.0100
+    }
+}

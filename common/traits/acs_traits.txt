@@ -29,3 +29,13 @@
 	ai_sociability = low_positive_ai_value
 	ai_vengefulness = high_positive_ai_value
 }
+
+sennatha = {
+	shown_in_ruler_designer = no
+
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	learning = 5
+	health = medium_health_bonus
+}

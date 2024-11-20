@@ -1,0 +1,4 @@
+﻿got_a_sennatha = {
+	icon = magic_positive
+    monthly_prestige = 0.1
+}

@@ -33,10 +33,10 @@ ACS.0001 = {
 			}
 			scope:acs_hecate = {
 				spawn_army = {
-					name = "Hyldrin"
+					name = "Hécate"
 					men_at_arms = {
 						type = acs_first_unit
-						stacks = 1000
+						stacks = 2500
 					}
 					location = scope:acs_hecate_province
 					origin = scope:acs_hecate_province
@@ -51,10 +51,10 @@ ACS.0001 = {
 						right_icon = scope:acs_hecate
 					}
 				}
-				trigger_event = {
-					id = ACS.0010
-					days = { 10 12 }
-				}
+				#trigger_event = {
+					#id = ACS.0010
+					#days = { 10 12 }
+				#}
 			}
 		}
     }
@@ -82,10 +82,10 @@ ACS.0002 = {
 		}
 		scope:acs_hecate = {
 			spawn_army = {
-				name = "Hyldrin"
+				name = "Hécate"
 				men_at_arms = {
 					type = acs_first_unit
-					stacks = 1000
+					stacks = 2500
 				}
 				location = scope:acs_hecate_province
 				origin = scope:acs_hecate_province
@@ -99,10 +99,6 @@ ACS.0002 = {
 					desc = HECATE_FIRST_WAR_MESSAGE_DESC
 					right_icon = scope:acs_hecate
 				}
-			}
-			trigger_event = {
-				id = ACS.0010
-				days = { 10 12 }
 			}
 		}
 	}
@@ -250,67 +246,5 @@ ACS.0007 = {
 				shattered_world_even_counties = yes
 			}
 		}
-	}
-}
-
-# Is an independent ruler, conquest
-ACS.0010 = {
-	hidden = yes
-	type = character_event
-
-	trigger = {
-		has_trait = dragon_rider
-		is_alive = yes
-		is_adult = yes
-		# is_independent_ruler = yes
-	}
-
-	immediate = {
-		random_neighboring_and_across_water_top_liege_realm = {
-			save_scope_as = target_title
-			holder = {
-				save_scope_as = target_character
-			}
-		}
-		start_war = {
-			cb = dragon_rider_conquest_cb
-			target = scope:target_title.holder.top_liege
-			target_title = scope:target_title
-		}
-		trigger_event = {
-			id = ACS.0011
-			years = { 5 10 }
-		}
-	}
-}
-
-# Is an independent ruler, conquest, loop
-ACS.0011 = {
-	hidden = yes
-	type = character_event
-
-	trigger = {
-		has_trait = dragon_rider
-		is_alive = yes
-		is_adult = yes
-		# is_independent_ruler = yes
-	}
-
-	immediate = {
-		random_neighboring_and_across_water_top_liege_realm = {
-			save_scope_as = target_title
-			holder = {
-				save_scope_as = target_character
-			}
-		}
-		start_war = {
-			cb = dragon_rider_conquest_cb
-			target = scope:target_title.holder.top_liege
-			target_title = scope:target_title
-		}
-	}
-	trigger_event = {
-		id = ACS.0010
-		years = { 5 10 }
 	}
 }

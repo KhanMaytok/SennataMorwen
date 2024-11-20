@@ -1,1 +1,78 @@
-﻿
+﻿namespace = ACS
+
+ACS.0100 = {
+	hidden = yes
+
+	trigger = {
+		basic_is_valid_for_yearly_events_trigger = yes
+        NOT = {
+            has_character_modifier = got_a_sennatha
+        }
+	}
+
+	immediate = {
+        if = {
+            limit = {
+				employs_court_position = court_mage_position
+				any_court_position_holder = {
+					type = court_mage_position
+					count > 0
+				}
+			}
+            root = {
+                add_character_modifier = {
+                    modifier = got_a_sennatha
+                    years = 20
+                }
+            }
+            create_character = {
+                template = sennatha_template
+                location = root.capital_province
+                faith = root.host.faith
+                culture = root.host.culture
+
+                after_creation = {
+                    #Sometimes adjust sexuality to create compatibility with root
+                    if = {
+                        limit = {
+                            root = { is_attracted_to_gender_of = prev }
+                            NOT = { is_attracted_to_gender_of = root }
+                        }
+                        set_sexuality = bisexual
+                    }
+                }
+                save_scope_as = sennatha
+            }
+            scope:sennatha = {
+				random_list = { 
+					5 = { add_trait = education_magical_ability_4 }
+					10 = { add_trait = education_magical_ability_3 }
+					5 = { add_trait = education_magical_ability_2 }
+				}
+				if = {
+					limit = { has_magic_perk_trigger = no }
+					ek_magic_perks_effect = yes
+				}
+                start_scheme = {
+                    type = seduce
+                    target = root.host
+                }
+			}
+
+            # KILL THE COURT MAGE
+            random_court_position_holder = {
+                type = court_mage_position
+                save_temporary_scope_as = old_mage
+            }
+
+            scope:old_mage = {
+                hidden_effect = {
+					death = {
+						death_reason = death_duel
+						killer = scope:sennatha
+					}
+				}
+            }
+        } 
+    }
+}

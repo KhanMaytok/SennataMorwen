@@ -199,3 +199,99 @@ maytok_shogunate_female_courtier_template = {
 		shogunate_set_fictional_nickname_effect = yes
 	}
 }
+
+
+sennatha_template = {
+	age = { 20 25 }
+	gender_female_chance = 100
+	culture = root.culture
+	faith = root.faith
+	dynasty = none
+	random_traits = no
+
+	trait = sennatha
+
+	#Education
+	#Personality trait 1 (main)
+	random_traits_list = {
+		count = 1
+		lustful = {}
+		deceitful = {}
+		brave = {}
+		gregarious = {}
+		ambitious = {}
+		vengeful = {}
+	}
+	#Personality trait 2-3
+	random_traits_list = {
+		count = 2
+		lustful = {}
+		deceitful = {}
+		brave = {}
+		gregarious = {}
+		ambitious = {}
+		vengeful = {}
+		gluttonous = {}
+		temperate  = {}
+		greedy = {}
+		generous = {}
+		lazy = {}
+		diligent = {}
+		wrathful = {}
+		calm = {}
+		patient = {}
+		impatient = {}
+		arrogant = {}
+		honest = {}
+		arbitrary = {}
+		just = {}
+		paranoid = {}
+		trusting = {}
+		compassionate = {}
+		callous = {}
+		sadistic = {}
+		stubborn = {}
+		fickle = {}
+		forgiving = {}
+	}
+	random_traits_list = {
+		count = 1
+		beauty_good_1 = {}
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+		intellect_good_1 = {}
+		intellect_good_2 = {}
+		intellect_good_3 = {}
+	}
+	random_traits_list = {
+		count = 1
+		lifestyle_herbalist = {}
+		schemer = {}
+		seducer = {}
+		torturer = {}
+		whole_of_body = {}
+		scholar = {}
+	}
+	### EK EDIT: Arcana
+	random_traits_list = {
+		count = 1
+		arcana_good_2 = {
+			weight = { base = 50 }
+		}
+		arcana_good_3 = {
+			weight = { base = 50 }
+		}
+	}
+	
+	### EK EDIT
+	after_creation = {
+		save_scope_value_as = {
+			name = base
+			value = { 9 10 }
+		}
+		add_arcana_skill = { VALUE = scope:base }	
+		
+		ek_character_setup_effect = yes
+		unmourned_blood_traits_effect = yes
+	}
+}
