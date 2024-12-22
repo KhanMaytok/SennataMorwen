@@ -209,7 +209,7 @@ sennatha_template = {
 	dynasty = none
 	random_traits = no
 
-	trait = sennatha
+	trait = sennatha_1
 
 	#Education
 	#Personality trait 1 (main)
@@ -322,8 +322,7 @@ rotten_sita_template = {
 	trait = albino
 	trait = wheezing
 	trait = bleeder
-	trait = arcana_bad_3
-	trait = sennatha
+	trait = sennatha_1
 
 	#Education
 	#Personality trait 1 (main)
