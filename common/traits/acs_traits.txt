@@ -31,11 +31,13 @@
 }
 
 sennatha = {
-	shown_in_ruler_designer = no
-	genetic = yes
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	learning = 5
-	health = medium_health_bonus
+    shown_in_ruler_designer = no
+
+    martial = 5
+    diplomacy = 5
+    intrigue = 5
+    learning = 5
+    health = medium_health_bonus
+    monthly_piety = 5
+    general_opinion =  10
 }
