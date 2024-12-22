@@ -82,7 +82,7 @@ ACS.0002 = {
 		}
 		scope:acs_hecate = {
 			spawn_army = {
-				name = "Hécate"
+				name = "Hecate"
 				men_at_arms = {
 					type = acs_first_unit
 					stacks = 2500
@@ -125,61 +125,6 @@ ACS.0003 = {
 			}
 			death = {
 				death_reason = death_execution
-			}
-		}
-	}
-}
-
-# Spawn some courtiers for shogunate
-ACS.0004 = {
-	type = character_event
-	hidden = yes
-
-	trigger = {
-		is_ai = no
-	}
-
-	immediate = {
-		root = {			
-			while = {
-				count = 5
-				create_character = {
-					employer = root
-					template = maytok_shogunate_male_courtier_template
-				}
-			}
-			while = {
-				count = 5
-				create_character = {
-					employer = root
-					template = maytok_shogunate_female_courtier_template
-				}
-			}
-		}
-	}
-}
-
-# Spawn some troups
-ACS.0005 = {
-	type = character_event
-	hidden = yes
-
-	trigger = {
-		is_ai = no
-	}
-
-	immediate = {
-		root = {			
-			spawn_army = {
-				name = "Busi"
-				men_at_arms = {
-					type = acs_first_unit
-					stacks = 300
-				}
-				location = root.province
-				origin = root.province
-				inheritable = no
-				uses_supply = no
 			}
 		}
 	}

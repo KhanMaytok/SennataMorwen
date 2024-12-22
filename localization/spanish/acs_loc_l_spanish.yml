@@ -1,5 +1,6 @@
 ﻿l_spanish:
  acs_first_unit: "Hécate"
+ Hecate: "Hécate"
  acs_second_unit: "Oushi-tai"
  trait_dragon_rider: "Portador de Hécate"
  trait_dragon_rider_desc: "Esta persona ha sido bendecida por la reina Avantika. Ahora porta una Hécate, la armadura viviente con la cual vigilará el Pacto de las ambiciones del Dios Emperador."
@@ -14,4 +15,4 @@
  got_a_sennatha: "Visitante ilustre"
  got_a_sennatha_desc: "Los dominios de esta persona han sido visitados por una persona poderosa en la magia."
  trait_sennatha: "Sennatha Morwen"
- trait_sennatha_desc: "Portadora de antiguos secretos y guía espiritual de una orden envuelta en intrigas y misticismo, la Sennatha Morwen no es solo una líder, sino un símbolo viviente de sabiduría inquebrantable y poder insondable. Se dice que cada palabra suya mueve hilos invisibles que atan el destino de reyes y mendigos por igual."
+ trait_sennatha_desc: "A recesive gene tracked by..."

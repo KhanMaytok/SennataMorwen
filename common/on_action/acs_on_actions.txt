@@ -6,6 +6,6 @@
 
 yearly_playable_pulse = {
     events = {
-        ACS.0100
+        # ACS.0100
     }
 }

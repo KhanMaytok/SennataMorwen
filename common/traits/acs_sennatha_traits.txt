@@ -1,0 +1,122 @@
+﻿# Sennatha traits 1-10
+
+sennatha_1 = {
+    opposites = { sennatha_2 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 1
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_2 = {
+    opposites = { sennatha_1 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 2
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_3 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 3
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_4 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_3 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 4
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_5 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_3 sennatha_4 sennatha_6 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 5
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_6 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_3 sennatha_4 sennatha_5 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 6
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_7 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_8 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 7
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_8 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_9 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 8
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_9 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_10 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 9
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}
+sennatha_10 = {
+    opposites = { sennatha_1 sennatha_2 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_9 }
+    diplomacy = 1
+    health = 0.5
+    birth = 0
+    random_creation = 0
+    group = sennatha_group
+    level = 10
+    genetic = yes
+    good = yes
+    ruler_designer_cost = 500
+}

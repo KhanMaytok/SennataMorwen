@@ -1,0 +1,73 @@
+﻿debug_spawn_hecate_interaction = {
+	use_diplomatic_range = no
+	category = interaction_debug_main
+	ignores_pending_interaction_block = yes
+	icon = prison
+	interface_priority = 1000
+	common_interaction = yes
+
+	is_shown = {
+		debug_only = yes
+		scope:recipient = {
+			is_imprisoned = no
+		}
+		NOT = {
+			scope:recipient = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+            random_province = {
+				save_scope_as = acs_hecate_province
+			}
+            while = {
+			    count = 60
+                spawn_army = {
+                    name = "Hecate"
+                    men_at_arms = {
+                        type = risen_dead
+                        stacks = 10
+                    }
+                    location = scope:acs_hecate_province
+                    origin = scope:acs_hecate_province
+                    inheritable = yes
+                    uses_supply = no
+                }
+            }
+			
+		}
+	}
+	auto_accept = yes
+}
+
+debug_spawn_rotter_sita_interaction = {
+	use_diplomatic_range = no
+	category = interaction_debug_main
+	ignores_pending_interaction_block = yes
+	icon = prison
+	interface_priority = 1000
+	common_interaction = yes
+
+	is_shown = {
+		debug_only = yes
+		scope:recipient = {
+			is_imprisoned = no
+		}
+		scope:recipient = scope:actor
+	}
+
+	on_accept = {
+		scope:recipient = {
+            while = {
+			    count = 5
+                create_character = {
+					employer = scope:recipient
+					template = rotten_sita_template
+				}
+            }
+			
+		}
+	}
+	auto_accept = yes
+}

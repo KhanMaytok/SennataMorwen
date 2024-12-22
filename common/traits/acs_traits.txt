@@ -32,7 +32,7 @@
 
 sennatha = {
 	shown_in_ruler_designer = no
-
+	genetic = yes
 	martial = 5
 	diplomacy = 5
 	intrigue = 5
