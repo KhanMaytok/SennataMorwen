@@ -4,13 +4,13 @@ sennatha_1 = {
     opposites = { sennatha_2 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
     diplomacy = 1
     health = massive_health_bonus
-    birth = 0
-    random_creation = 0
+    birth = 0.15
+	random_creation = 0.15
     group = sennatha_group
     level = 1
     genetic = yes
+    flag = add_arcana_3
     good = yes
-    shown_in_ruler_designer = no
 }
 sennatha_2 = {
     opposites = { sennatha_1 sennatha_3 sennatha_4 sennatha_5 sennatha_6 sennatha_7 sennatha_8 sennatha_9 sennatha_10 }
@@ -21,6 +21,7 @@ sennatha_2 = {
     group = sennatha_group
     level = 2
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -33,6 +34,7 @@ sennatha_3 = {
     group = sennatha_group
     level = 3
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -45,6 +47,7 @@ sennatha_4 = {
     group = sennatha_group
     level = 4
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -57,6 +60,7 @@ sennatha_5 = {
     group = sennatha_group
     level = 5
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -69,6 +73,7 @@ sennatha_6 = {
     group = sennatha_group
     level = 6
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -81,6 +86,7 @@ sennatha_7 = {
     group = sennatha_group
     level = 7
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -93,6 +99,7 @@ sennatha_8 = {
     group = sennatha_group
     level = 8
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -105,6 +112,7 @@ sennatha_9 = {
     group = sennatha_group
     level = 9
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }
@@ -117,6 +125,7 @@ sennatha_10 = {
     group = sennatha_group
     level = 10
     genetic = yes
+    flag = add_arcana_3
     good = yes
     shown_in_ruler_designer = no
 }

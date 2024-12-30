@@ -1,7 +1,7 @@
 ﻿sennatha_womb_position = {
 	category = court_position_category_special
 	skill = learning
-	max_available_positions = 5
+	max_available_positions = 1
 	valid_character = {
 		scope:employee = {
 			is_imprisoned = no

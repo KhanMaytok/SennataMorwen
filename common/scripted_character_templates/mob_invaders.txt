@@ -200,7 +200,6 @@ maytok_shogunate_female_courtier_template = {
 	}
 }
 
-
 sennatha_template = {
 	age = { 20 25 }
 	gender_female_chance = 100
@@ -295,7 +294,6 @@ sennatha_template = {
 		unmourned_blood_traits_effect = yes
 	}
 }
-
 
 rotten_sita_template = {
 	age = { 1 2 }
