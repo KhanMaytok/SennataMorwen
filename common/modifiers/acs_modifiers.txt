@@ -2,3 +2,16 @@
 	icon = magic_positive
     monthly_prestige = 0.1
 }
+
+warframe_armor_modifier = {
+	knight_effectiveness_mult = 6.9
+	monthly_prestige = 6.9
+    pursue_efficiency = 6.9
+    domain_limit = 6
+    liege_opinion = -69
+    siege_phase_time = -0.69
+    vassal_opinion = 69
+    fertility = -0.25
+    stress_gain_mult = 0.25
+    vassal_limit = 6
+}

@@ -76,3 +76,151 @@ ACS.0100 = {
         } 
     }
 }
+
+# SET MANNIMARCO AS IMPREGNATOR
+ACS.0101 = {
+    hidden = yes
+
+    trigger = {
+        is_ai = no
+	}
+
+    immediate = {
+        random_ruler = {
+            limit = {
+                is_adult = yes
+                is_imprisoned = no
+                is_alive = yes
+                is_female = no
+                is_married = yes
+            }
+            weight = {
+                base = 1
+                modifier = {
+                    has_trait = sennatha_1
+                    factor = 10
+                }
+                modifier = {
+                    has_trait = sennatha_2
+                    factor = 20
+                }
+                modifier = {
+                    has_trait = sennatha_3
+                    factor = 30
+                }
+                modifier = {
+                    has_trait = sennatha_4
+                    factor = 40
+                }
+                modifier = {
+                    has_trait = sennatha_5
+                    factor = 50
+                }
+                modifier = {
+                    has_trait = sennatha_6
+                    factor = 60
+                }
+                modifier = {
+                    has_trait = sennatha_7
+                    factor = 70
+                }
+                modifier = {
+                    has_trait = sennatha_8
+                    factor = 80
+                }
+                modifier = {
+                    has_trait = sennatha_9
+                    factor = 90
+                }
+                modifier = {
+                    has_trait = sennatha_10
+                    factor = 100
+                }
+                modifier = {
+                    has_trait = intellect_good_3
+                    factor = 30
+                }
+                modifier = {
+                    has_trait = intellect_good_2
+                    factor = 20
+                }
+                modifier = {
+                    has_trait = intellect_good_1
+                    factor = 10
+                }
+                modifier = {
+                    has_trait = beauty_good_3
+                    factor = 15
+                }
+                modifier = {
+                    has_trait = beauty_good_2
+                    factor = 10
+                }
+                modifier = {
+                    has_trait = beauty_good_1
+                    factor = 5
+                }
+                modifier = {
+                    has_trait = arcana_good_3
+                    factor = 60
+                }
+                modifier = {
+                    has_trait = arcana_good_2
+                    factor = 40
+                }
+                modifier = {
+                    has_trait = arcana_good_1
+                    factor = 20
+                }
+                modifier = {
+                    has_trait = physique_good_3
+                    factor = 15
+                }
+                modifier = {
+                    has_trait = physique_good_2
+                    factor = 10
+                }
+                modifier = {
+                    has_trait = physique_good_1
+                    factor = 5
+                }
+                modifier = {
+                    has_trait = fecund
+                    factor = 10
+                }
+                modifier = {
+                    has_trait = strong
+                    factor = 3
+                }
+                modifier = {
+                    has_trait = pure_blooded
+                    factor = 3
+                }
+            }
+            debug_log = "ACS.0101 TARGET"
+            random_spouse = {
+				save_scope_as = recipient_spouse
+			}
+        }
+
+        if = {
+            limit = { exists = scope:recipient_spouse }
+            debug_log = "ACS.0101 womb"
+            character:mannimarco_1000 = {
+                add_trait = bleeder
+                save_scope_as = mannimarco
+            }
+            scope:recipient_spouse = {
+                if = {
+					limit = { can_have_children = yes }
+					make_pregnant = { father = scope:mannimarco }
+                    add_trait = sennatha
+				}
+                else = {
+                    debug_log = "ACS.0101 NO PUEDE TENER HIJOS"
+                    death = { death_reason = death_maimed_by_wild_beast }					
+				}
+            }        
+        }
+    }
+}
