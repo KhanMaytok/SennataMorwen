@@ -84,6 +84,7 @@ debug_mark_sennatha_bride_interaction = {
 		scope:recipient = {
 			is_imprisoned = no
 			is_female = yes
+			is_pregnant = no
 		}
 		NOT = { scope:actor = scope:recipient }
 		scope:recipient = { is_adult = yes }
