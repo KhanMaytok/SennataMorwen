@@ -134,10 +134,6 @@ debug_make_groom_and_bride_interaction = {
 	common_interaction = yes
 
 	is_shown = {
-		scope:recipient = {
-			is_imprisoned = no
-			is_female = no
-		}
 		scope:actor = scope:recipient
 		scope:actor = { is_ai = no }
 	}
