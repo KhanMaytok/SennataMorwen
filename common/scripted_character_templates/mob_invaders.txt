@@ -232,7 +232,7 @@ sennatha_template = {
 }
 
 rotten_sita_template = {
-	age = { 20 25 }
+	age = { 20 25 } # Increased age range for rotten sita to represent adult characters
 	gender_female_chance = 100
 	culture = root.culture
 	faith = root.faith
