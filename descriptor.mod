@@ -1,7 +1,7 @@
-version="1.11.*"
+version="1.0"
 tags={
 	"Events"
 	"Gameplay"
 }
-name="Plague"
-supported_version="1.11.5"
+name="Sennatha Morwen"
+supported_version="1.15.*"

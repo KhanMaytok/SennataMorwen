@@ -55,6 +55,7 @@ debug_spawn_rotter_sita_interaction = {
 			is_imprisoned = no
 		}
 		scope:recipient = scope:actor
+		scope:actor = { is_ai = no }
 	}
 
 	on_accept = {
@@ -297,6 +298,7 @@ debug_warframe_armor_interaction = {
 	on_accept = {
 		scope:recipient = {
 			create_artifact_warframe_armor_effect = { OWNER = this }
+			add_character_flag = has_warframe_armor
 		}
 	}
 	auto_accept = yes

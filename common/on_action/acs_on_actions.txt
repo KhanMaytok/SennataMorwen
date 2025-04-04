@@ -1,11 +1,11 @@
-﻿on_death = {
-    events = {
-        ACS.0002
-    }
-}
-
-yearly_playable_pulse = {
-    events = {
-        ACS.0101
-    }
-}
+﻿#on_death = {
+    #events = {
+        #ACS.0002
+    #}
+#}
+#
+#yearly_playable_pulse = {
+    #events = {
+        #ACS.0101
+    #}
+#}

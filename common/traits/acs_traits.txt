@@ -41,5 +41,3 @@ sennatha = {
     monthly_piety = 5
     general_opinion =  10
 }
-
-# effect = { 23239 = { marry = 28069 }}

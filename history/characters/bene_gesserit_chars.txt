@@ -1,0 +1,15 @@
+﻿benegesserit_2b = { 
+	name = "Nimriell"
+	dynasty = dyn_bearclaw
+	religion = greenpact
+	culture = bosmer
+	female = yes
+	father = bearclaw_1
+	mother = bearclaw_wife_1
+	
+	trait = lifespan_3
+
+	3343.1.1 = { birth = yes }
+	3483.1.1 = { trait = bubonic_plague }
+	3484.1.1 = { death = { death_reason = death_bubonic_plague } }
+}

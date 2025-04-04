@@ -1,4 +1,16 @@
-e_nahua = {
-	1.1.1 = {
+d_laamp_benegesserit = {
+	3339.1.1 = {
+		liege = 0
+		holder = benegesserit_2b #Nimriell Bearclaw
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+			destroy_landless_title_no_dlc_effect = { DATE = 3360.1.1 }
+		}
+	}
+	3365.3.6 = {
+		holder = 0 #Landed
 	}
 }

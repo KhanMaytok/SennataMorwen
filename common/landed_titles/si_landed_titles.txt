@@ -1,10 +1,11 @@
-﻿e_nahua = {
-	color={ 255 111 0 }
-	color2={ 0 0 0 }
-	
+﻿d_laamp_benegesserit = {
+	color = { 100 100 100 }
+	capital = c_eldenroot
+
+	definite_form = yes
 	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = yes
 	no_automatic_claims = yes
-	can_create = { always = no }
-	
-	capital = c_vathmora
+	destroy_if_invalid_heir = yes
 }

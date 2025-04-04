@@ -3,7 +3,7 @@
 # Initial hecate spawner
 ACS.0001 = {
     scope = none
-	hidden = yes
+    hidden = yes
 
     trigger = {
         NOT = {
@@ -11,185 +11,170 @@ ACS.0001 = {
         }
     }
 
-	immediate = {
+    immediate = {
         set_global_variable = {
-			name = spawned_warframes
-			value = yes
-		}
+            name = spawned_warframes
+            value = yes
+        }
 
-		# GENERATE HECATE IN A LOOP
-		# THEY ARE WMD
-		while = {
-			count = 5
-			random_province = {
-				save_scope_as = acs_hecate_province
-			}
-			random_ruler = {
-				limit = {
-					NOT = { has_trait = dragon_rider }
-				}
-				add_trait = dragon_rider
-				save_scope_as = acs_hecate				
-			}
-			scope:acs_hecate = {
-				spawn_army = {
-					name = "Hécate"
-					men_at_arms = {
-						type = acs_first_unit
-						stacks = 2500
-					}
-					location = scope:acs_hecate_province
-					origin = scope:acs_hecate_province
-					inheritable = no
-					uses_supply = no
-				}
-				every_player = {
-					send_interface_message = {
-						type = event_generic_bad
-						title = HECATE_FIRST_WAR_MESSAGE
-						desc = HECATE_FIRST_WAR_MESSAGE_DESC
-						right_icon = scope:acs_hecate
-					}
-				}
-				#trigger_event = {
-					#id = ACS.0010
-					#days = { 10 12 }
-				#}
-			}
-		}
+        # GENERATE HECATE IN A LOOP
+        # THEY ARE WMD
+        while = {
+            count = 5
+            random_province = {
+                save_scope_as = acs_hecate_province
+            }
+            random_ruler = {
+                limit = {
+                    NOT = { has_trait = dragon_rider }
+                }
+                add_trait = dragon_rider
+                save_scope_as = acs_hecate                
+            }
+            scope:acs_hecate = {
+                spawn_army = {
+                    name = "Hécate"
+                    men_at_arms = {
+                        type = acs_first_unit
+                        stacks = 2500
+                    }
+                    location = scope:acs_hecate_province
+                    origin = scope:acs_hecate_province
+                    inheritable = no
+                    uses_supply = no
+                }
+                every_player = {
+                    send_interface_message = {
+                        type = event_generic_bad
+                        title = HECATE_FIRST_WAR_MESSAGE
+                        desc = HECATE_FIRST_WAR_MESSAGE_DESC
+                        right_icon = scope:acs_hecate
+                    }
+                }
+                #trigger_event = {
+                    #id = ACS.0010
+                    #days = { 10 12 }
+                #}
+            }
+        }
     }
 }
 
 # The Hecate seeks another bearer immediately after the death of the current one
 ACS.0002 = {
-	type = character_event
-	hidden = yes
+    type = character_event
+    hidden = yes
 
-	trigger = {
-		has_trait = dragon_rider
-	}
-	
-	immediate = {
-		random_province = {
-			save_scope_as = acs_hecate_province
-		}
-		random_ruler = {
-			limit = {
-				NOT = { has_trait = dragon_rider }
-			}
-			add_trait = dragon_rider
-			save_scope_as = acs_hecate				
-		}
-		scope:acs_hecate = {
-			spawn_army = {
-				name = "Hecate"
-				men_at_arms = {
-					type = acs_first_unit
-					stacks = 2500
-				}
-				location = scope:acs_hecate_province
-				origin = scope:acs_hecate_province
-				inheritable = no
-				uses_supply = no
-			}
-			every_player = {
-				send_interface_message = {
-					type = event_generic_bad
-					title = HECATE_FIRST_WAR_MESSAGE
-					desc = HECATE_FIRST_WAR_MESSAGE_DESC
-					right_icon = scope:acs_hecate
-				}
-			}
-		}
-	}
+    trigger = {
+        has_character_flag = has_warframe_armor
+    }
+    
+    immediate = {
+        random_ruler = {
+            limit = {
+                NOT = { has_character_flag = has_warframe_armor }
+            }
+            create_artifact_warframe_armor_effect = { OWNER = this }
+            add_character_flag = has_warframe_armor
+            save_scope_as = acs_hecate                
+        }
+        every_player = {
+            send_interface_message = {
+                type = event_generic_bad
+                title = HECATE_FIRST_WAR_MESSAGE
+                desc = HECATE_FIRST_WAR_MESSAGE_DESC
+                right_icon = scope:acs_hecate
+            }
+        }
+    }
 }
 
 # Kills every character >= 13 years old
 ACS.0003 = {
-	type = character_event
-	hidden = yes
+    type = character_event
+    hidden = yes
 
-	trigger = {
-		is_ai = yes
-		age >= 15
-	}
+    trigger = {
+        is_ai = yes
+        age >= 15
+    }
 
-	immediate = {
-		every_living_character = {
-			limit = {
-				is_ai = yes
-				age >= 13
-				NOT = {
-					has_trait = dragon_rider
-				}
-			}
-			death = {
-				death_reason = death_execution
-			}
-		}
-	}
+    immediate = {
+        every_living_character = {
+            limit = {
+                is_ai = yes
+                age >= 13
+                NOT = {
+                    has_trait = dragon_rider
+                }
+            }
+            death = {
+                death_reason = death_execution
+            }
+        }
+    }
 }
 
 # Shattered world
 ACS.0006 = {
-	hidden = yes
-	type = empty
-	
-	trigger = {
-		is_ai = no
-	}
-	
-	immediate = {
-		every_living_character = {
-			every_character_war = {
-				limit = { always = yes }
-				end_war = invalidated
-			}
-		}
-		every_living_character = {
-			limit = { is_imprisoned = yes }
-			release_from_prison = yes
-		}
-		every_ruler = {
-			every_ally = {
-				break_alliance = prev
-			}
-		}
+    hidden = yes
+    type = empty
+    
+    trigger = {
+        is_ai = no
+    }
+    
+    immediate = {
+        every_living_character = {
+            every_character_war = {
+                limit = { always = yes }
+                end_war = invalidated
+            }
+        }
+        every_living_character = {
+            limit = { is_imprisoned = yes }
+            release_from_prison = yes
+        }
+        every_ruler = {
+            every_ally = {
+                break_alliance = prev
+            }
+        }
 
-		every_ruler = {
-			limit = {
-				is_ai = yes
-			}
-			trigger_event = ACS.0007
-		}
-	}
+        every_ruler = {
+            limit = {
+                is_ai = yes
+            }
+            trigger_event = ACS.0007
+        }
+    }
 }
 
 # Shatter Down To Counties
 ACS.0007 = {
-	hidden = yes
-	type = character_event
-	
-	immediate = {
-		every_held_title = {
-			limit = {
-				OR = {
-					tier = tier_duchy 
-					tier = tier_kingdom 
-					tier = tier_empire 
-				}
-			}
-			holder = { destroy_title = prev }
-		}
-		root = {
-			shattered_world_split_exclaves = yes
-		}
-		if = {
-			limit = { has_game_rule = shatter_duchies_even }
+    hidden = yes
+    type = character_event
+    
+    immediate = {
+        every_held_title = {
+            limit = {
+                OR = {
+                    tier = tier_duchy 
+                    tier = tier_kingdom 
+                    tier = tier_empire 
+                }
+            }
+            holder = { destroy_title = prev }
+        }
+        root = {
+            shattered_world_split_exclaves = yes
+        }
+        if = {
+            limit = { has_game_rule = shatter_duchies_even }
 
-			root = {
-				shattered_world_even_counties = yes
-			}
-		}
-	}
+            root = {
+                shattered_world_even_counties = yes
+            }
+        }
+    }
 }
