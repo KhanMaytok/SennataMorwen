@@ -1,8 +1,8 @@
 ﻿benegesserit_2b = { 
 	name = "Nimriell"
 	dynasty = dyn_bearclaw
-	religion = greenpact
-	culture = bosmer
+	religion = azura_cult
+	culture = nibenese
 	female = yes
 	father = bearclaw_1
 	mother = bearclaw_wife_1
