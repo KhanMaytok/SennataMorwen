@@ -18,23 +18,23 @@
 
 	on_accept = {
 		scope:recipient = {
-            random_province = {
+			random_province = {
 				save_scope_as = acs_hecate_province
 			}
-            while = {
-			    count = 60
-                spawn_army = {
-                    name = "Hecate"
-                    men_at_arms = {
-                        type = risen_dead
-                        stacks = 10
-                    }
-                    location = scope:acs_hecate_province
-                    origin = scope:acs_hecate_province
-                    inheritable = yes
-                    uses_supply = no
-                }
-            }
+			while = {
+				count = 60
+				spawn_army = {
+					name = "Hecate"
+					men_at_arms = {
+						type = risen_dead
+						stacks = 10
+					}
+					location = scope:acs_hecate_province
+					origin = scope:acs_hecate_province
+					inheritable = yes
+					uses_supply = no
+				}
+			}
 			
 		}
 	}
@@ -59,13 +59,13 @@ debug_spawn_rotter_sita_interaction = {
 
 	on_accept = {
 		scope:recipient = {
-            while = {
-			    count = 10
-                create_character = {
+			while = {
+				count = 10
+				create_character = {
 					employer = scope:recipient
 					template = rotten_sita_template
 				}
-            }
+			}
 			
 		}
 	}
@@ -76,7 +76,7 @@ debug_mark_sennatha_bride_interaction = {
 	use_diplomatic_range = yes
 	category = interaction_debug_main
 	ignores_pending_interaction_block = yes
-	icon = prison
+	icon = icon_scheme_sway
 	interface_priority = 1000
 	common_interaction = yes
 
@@ -92,7 +92,7 @@ debug_mark_sennatha_bride_interaction = {
 
 	on_accept = {
 		scope:recipient = {
-            add_trait = sennatha_bride
+			add_trait = sennatha_bride
 			
 		}
 	}
@@ -103,7 +103,7 @@ debug_mark_sennatha_groom_interaction = {
 	use_diplomatic_range = yes
 	category = interaction_debug_main
 	ignores_pending_interaction_block = yes
-	icon = prison
+	icon = icon_scheme_sway
 	interface_priority = 1000
 	common_interaction = yes
 
@@ -119,8 +119,7 @@ debug_mark_sennatha_groom_interaction = {
 
 	on_accept = {
 		scope:recipient = {
-            add_trait = sennatha_groom
-			
+			add_trait = sennatha_groom
 		}
 	}
 	auto_accept = yes
