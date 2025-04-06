@@ -41,3 +41,15 @@ sennatha = {
     monthly_piety = 5
     general_opinion =  10
 }
+
+sennatha_bride = {
+    shown_in_ruler_designer = no
+    health = medium_health_bonus
+    general_opinion =  10
+}
+
+sennatha_groom = {
+    shown_in_ruler_designer = no
+    health = medium_health_bonus
+    general_opinion =  10
+}
