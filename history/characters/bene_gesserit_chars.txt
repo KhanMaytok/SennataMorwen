@@ -1,6 +1,6 @@
 ﻿benegesserit_2b_mother = {
 	dynasty = none
-	religion = azura_cult
+	religion = imperial_cult
 	culture = nibenese
 	female = yes
 
@@ -14,7 +14,7 @@
 benegesserit_2b = {
 	name = "Nimriell"
 	dynasty = dyn_bearclaw
-	religion = azura_cult
+	religion = imperial_cult
 	culture = nibenese
 	female = yes
 	father = bearclaw_1
@@ -27,6 +27,7 @@ benegesserit_2b = {
 	trait = lustful
 
 	3323.1.1 = { birth = yes }
+	3333.1.1 = { add_gold = 15000 }
 	3483.1.1 = { trait = bubonic_plague }
 	3484.1.1 = { death = { death_reason = death_bubonic_plague } }
 }
@@ -35,7 +36,7 @@ benegesserit_2b = {
 benegesserit_2b_rotten_1 = {
 	name = "Nieth"
 	dynasty = dyn_bearclaw
-	religion = azura_cult
+	religion = imperial_cult
 	culture = nibenese
 	female = yes
 	mother = benegesserit_2b
@@ -46,7 +47,138 @@ benegesserit_2b_rotten_1 = {
 	trait = possessed_genetic
 	trait = beauty_good_3
 	trait = intellect_bad_3
-	trait = physique_bad_3
+	trait = clubfooted
+	trait = hunchbacked
+	trait = lisping
+	trait = stuttering
+	trait = dwarf
+	trait = spindly
+	trait = scaly
+	trait = albino
+	trait = wheezing
+	trait = bleeder
+	trait = sennatha_1
+	trait = seducer
+	trait = whole_of_body
+
+	3343.1.1 = { birth = yes }
+	3483.1.1 = { trait = bubonic_plague }
+	3484.1.1 = { death = { death_reason = death_bubonic_plague } }
+}
+
+benegesserit_2b_rotten_2 = {
+	name = "Mariel"
+	dynasty = dyn_bearclaw
+	religion = imperial_cult
+	culture = nibenese
+	female = yes
+	mother = benegesserit_2b
+
+	# Given traits
+	trait = depressed_genetic
+	trait = lunatic_genetic
+	trait = possessed_genetic
+	trait = beauty_good_3
+	trait = intellect_bad_3
+	trait = clubfooted
+	trait = hunchbacked
+	trait = lisping
+	trait = stuttering
+	trait = dwarf
+	trait = spindly
+	trait = scaly
+	trait = albino
+	trait = wheezing
+	trait = bleeder
+	trait = sennatha_1
+	trait = seducer
+	trait = whole_of_body
+
+	3343.1.1 = { birth = yes }
+	3483.1.1 = { trait = bubonic_plague }
+	3484.1.1 = { death = { death_reason = death_bubonic_plague } }
+}
+
+benegesserit_2b_rotten_3 = {
+	name = "Adandora"
+	dynasty = dyn_bearclaw
+	religion = imperial_cult
+	culture = nibenese
+	female = yes
+	mother = benegesserit_2b
+
+	# Given traits
+	trait = depressed_genetic
+	trait = lunatic_genetic
+	trait = possessed_genetic
+	trait = beauty_good_3
+	trait = intellect_bad_3
+	trait = clubfooted
+	trait = hunchbacked
+	trait = lisping
+	trait = stuttering
+	trait = dwarf
+	trait = spindly
+	trait = scaly
+	trait = albino
+	trait = wheezing
+	trait = bleeder
+	trait = sennatha_1
+	trait = seducer
+	trait = whole_of_body
+
+	3343.1.1 = { birth = yes }
+	3483.1.1 = { trait = bubonic_plague }
+	3484.1.1 = { death = { death_reason = death_bubonic_plague } }
+}
+
+benegesserit_2b_rotten_4 = {
+	name = "Gathiel"
+	dynasty = dyn_bearclaw
+	religion = imperial_cult
+	culture = nibenese
+	female = yes
+	mother = benegesserit_2b
+
+	# Given traits
+	trait = depressed_genetic
+	trait = lunatic_genetic
+	trait = possessed_genetic
+	trait = beauty_good_3
+	trait = intellect_bad_3
+	trait = clubfooted
+	trait = hunchbacked
+	trait = lisping
+	trait = stuttering
+	trait = dwarf
+	trait = spindly
+	trait = scaly
+	trait = albino
+	trait = wheezing
+	trait = bleeder
+	trait = sennatha_1
+	trait = seducer
+	trait = whole_of_body
+
+	3343.1.1 = { birth = yes }
+	3483.1.1 = { trait = bubonic_plague }
+	3484.1.1 = { death = { death_reason = death_bubonic_plague } }
+}
+
+benegesserit_2b_rotten_5 = {
+	name = "Sorvayel"
+	dynasty = dyn_bearclaw
+	religion = imperial_cult
+	culture = nibenese
+	female = yes
+	mother = benegesserit_2b
+
+	# Given traits
+	trait = depressed_genetic
+	trait = lunatic_genetic
+	trait = possessed_genetic
+	trait = beauty_good_3
+	trait = intellect_bad_3
 	trait = clubfooted
 	trait = hunchbacked
 	trait = lisping
