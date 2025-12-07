@@ -1,0 +1,11 @@
+﻿d_laamp_benegesserit = {
+	color = { 100 100 100 }
+	capital = c_eldenroot
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}

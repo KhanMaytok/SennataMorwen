@@ -1,0 +1,335 @@
+﻿nahua_invader_commander_template = {
+	age = { 35 65 }
+	gender = male
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+	
+	martial = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+	
+	prowess = { #They are beefcakes
+		10
+		25
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_3 = {
+			weight = { base = 50 }
+		}
+		education_martial_4 = {
+			weight = { base = 40 }
+		}
+	}
+	
+	random_traits_list = {
+		count = 2
+		logistician = {}
+		flexible_leader = {}
+		forder = {}
+		jungle_stalker = {}
+		holy_warrior = {}
+		organizer = {}
+	}
+}
+
+nahua_invader_soldier_template = {
+	age = { 18 35 }
+	gender = male
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+	
+	martial = {
+		min_template_decent_skill
+		max_template_high_skill
+	}
+	
+	prowess = { #Total beefcakes
+		10
+		30
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_1 = {
+			weight = { base = 30 }
+		}
+		education_martial_2 = {
+			weight = { base = 30 }
+		}
+		education_martial_3 = {
+			weight = { base = 30 }
+		}
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_prowess_1 = {
+			weight = { base = 20 }
+		}
+		education_martial_prowess_1 = {
+			weight = { base = 30 }
+		}
+		education_martial_prowess_1 = {
+			weight = { base = 30 }
+		}
+		education_martial_prowess_1 = {
+			weight = { base = 20 }
+		}
+	}
+}
+
+
+nahua_invader_male_courtier_template = {
+	age = { 15 40 }
+	gender = male
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+}
+
+nahua_invader_female_courtier_template = {
+	age = { 15 40 }
+	gender = female
+	faith = faith:mehrunes_cult
+	culture = culture:dremora
+}
+
+warframe_character_template = {
+	age = { 35 65 }
+	gender = female
+	faith = faith:old_gods
+	culture = culture:iliac
+	
+	martial = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+	
+	prowess = { #They are beefcakes
+		10
+		25
+	}
+	
+	random_traits_list = {
+		count = 1
+		education_martial_3 = {
+			weight = { base = 50 }
+		}
+		education_martial_4 = {
+			weight = { base = 40 }
+		}
+	}
+	
+	random_traits_list = {
+		count = 2
+		logistician = {}
+		flexible_leader = {}
+		forder = {}
+		jungle_stalker = {}
+		holy_warrior = {}
+		organizer = {}
+	}
+
+	trait = lifespan_5
+	trait = dragon_rider
+}
+
+sennatha_template = {
+	age = { 20 25 }
+	gender_female_chance = 100
+	culture = root.culture
+	faith = root.faith
+	dynasty = none
+	random_traits = no
+
+	trait = sennatha_1
+
+	#Education
+	#Personality trait 1 (main)
+	random_traits_list = {
+		count = 1
+		lustful = {}
+		deceitful = {}
+		brave = {}
+		gregarious = {}
+		ambitious = {}
+		vengeful = {}
+	}
+	#Personality trait 2-3
+	random_traits_list = {
+		count = 2
+		lustful = {}
+		deceitful = {}
+		brave = {}
+		gregarious = {}
+		ambitious = {}
+		vengeful = {}
+		gluttonous = {}
+		temperate  = {}
+		greedy = {}
+		generous = {}
+		lazy = {}
+		diligent = {}
+		wrathful = {}
+		calm = {}
+		patient = {}
+		impatient = {}
+		arrogant = {}
+		honest = {}
+		arbitrary = {}
+		just = {}
+		paranoid = {}
+		trusting = {}
+		compassionate = {}
+		callous = {}
+		sadistic = {}
+		stubborn = {}
+		fickle = {}
+		forgiving = {}
+	}
+	random_traits_list = {
+		count = 1
+		beauty_good_1 = {}
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+		intellect_good_1 = {}
+		intellect_good_2 = {}
+		intellect_good_3 = {}
+	}
+	random_traits_list = {
+		count = 1
+		lifestyle_herbalist = {}
+		schemer = {}
+		seducer = {}
+		torturer = {}
+		whole_of_body = {}
+		scholar = {}
+	}
+	### EK EDIT: Arcana
+	random_traits_list = {
+		count = 1
+		arcana_good_2 = {
+			weight = { base = 50 }
+		}
+		arcana_good_3 = {
+			weight = { base = 50 }
+		}
+	}
+	
+	### EK EDIT
+	after_creation = {
+		save_scope_value_as = {
+			name = base
+			value = { 9 10 }
+		}
+		add_arcana_skill = { VALUE = scope:base }	
+		
+		ek_character_setup_effect = yes
+		unmourned_blood_traits_effect = yes
+	}
+}
+
+rotten_sita_template = {
+	age = { 20 25 } # Increased age range for rotten sita to represent adult characters
+	gender_female_chance = 100
+	culture = root.culture
+	faith = root.faith
+	dynasty = none
+	random_traits = no
+
+	# Given traits
+	trait = depressed_genetic
+	trait = lunatic_genetic
+	trait = possessed_genetic
+	trait = beauty_good_3
+	trait = intellect_bad_3
+	trait = physique_bad_3
+	trait = clubfooted
+	trait = hunchbacked
+	trait = lisping
+	trait = stuttering
+	trait = dwarf
+	trait = spindly
+	trait = scaly
+	trait = albino
+	trait = wheezing
+	trait = bleeder
+	trait = sennatha_1
+
+	#Education
+	#Personality trait 1 (main)
+	random_traits_list = {
+		count = 1
+		lustful = {}
+		deceitful = {}
+		brave = {}
+		gregarious = {}
+		ambitious = {}
+		vengeful = {}
+	}
+	#Personality trait 2-3
+	random_traits_list = {
+		count = 2
+		lustful = {}
+		deceitful = {}
+		brave = {}
+		gregarious = {}
+		ambitious = {}
+		vengeful = {}
+		gluttonous = {}
+		temperate  = {}
+		greedy = {}
+		generous = {}
+		lazy = {}
+		diligent = {}
+		wrathful = {}
+		calm = {}
+		patient = {}
+		impatient = {}
+		arrogant = {}
+		honest = {}
+		arbitrary = {}
+		just = {}
+		paranoid = {}
+		trusting = {}
+		compassionate = {}
+		callous = {}
+		sadistic = {}
+		stubborn = {}
+		fickle = {}
+		forgiving = {}
+	}
+	random_traits_list = {
+		count = 1
+		lifestyle_herbalist = {}
+		schemer = {}
+		seducer = {}
+		torturer = {}
+		whole_of_body = {}
+		scholar = {}
+	}
+	### EK EDIT: Arcana
+	random_traits_list = {
+		count = 1
+		arcana_good_2 = {
+			weight = { base = 50 }
+		}
+		arcana_good_3 = {
+			weight = { base = 50 }
+		}
+	}
+	
+	### EK EDIT
+	after_creation = {
+		save_scope_value_as = {
+			name = base
+			value = { 9 10 }
+		}
+		add_arcana_skill = { VALUE = scope:base }	
+		
+		ek_character_setup_effect = yes
+		unmourned_blood_traits_effect = yes
+	}
+}

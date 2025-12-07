@@ -1,0 +1,43 @@
+﻿create_artifact_warframe_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_dragon_priest_name
+		description = artifact_mask_dragon_priest_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:inspiration_owner
+			recipient = root
+			location = scope:inspiration_owner.location
+		}
+		modifier = warframe_armor_modifier
+		save_scope_as = dragon_priest_mask
+		decaying = no
+	}
+
+	scope:dragon_priest_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		set_variable = { name = arcana_modifier value = 5 }
+		#set_variable = { name = magicka_modifier_flat value = 0.2 }
+		#set_variable = { name = magicka_modifier_mult value = 0.05 }
+	}
+}

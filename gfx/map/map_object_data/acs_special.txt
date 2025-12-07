@@ -1,0 +1,9 @@
+object={
+	name="sba_mont_saint_michel_01"
+	clamp_to_water_level=no
+	render_under_water=yes
+	generated_content=no
+	layer="temp_layer"
+	pdxmesh="sm_mont_saint_michel_01_mesh"
+	count=0
+}

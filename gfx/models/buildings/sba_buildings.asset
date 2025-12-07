@@ -1,0 +1,6 @@
+entity = {
+	name = "sba_building_special_all"	
+	@gap = 12
+	locator = { name = "pos_11_a" position = { @[gap * 0.5] 000 @[gap * -1.5 ] } }
+	attach = {         "pos_11_a" = "sm_mont_saint_michel_01_entity" }
+}

@@ -1,0 +1,55 @@
+﻿dragon_rider = {
+	shown_in_ruler_designer = no
+
+	flag = join_factions_more
+	flag = can_murder_own_children
+
+	martial = 5
+	prowess = 99
+
+	monthly_prestige = 10
+
+	opinion_of_liege = -100
+	glory_hound_opinion = 100
+
+	stress_gain_mult = 0.99
+	dread_gain_mult = 0.99
+	dread_baseline_add = 75
+
+	ai_war_cooldown = -0.75
+	ai_war_chance = 5
+
+	health = -0.1
+
+	ai_honor = low_negative_ai_value
+	ai_greed = very_high_positive_ai_value
+	ai_energy = very_high_positive_ai_value
+	ai_boldness = high_positive_ai_value
+	ai_zeal = very_low_positive_ai_value
+	ai_sociability = low_positive_ai_value
+	ai_vengefulness = high_positive_ai_value
+}
+
+sennatha = {
+    shown_in_ruler_designer = no
+
+    martial = 5
+    diplomacy = 5
+    intrigue = 5
+    learning = 5
+    health = medium_health_bonus
+    monthly_piety = 5
+    general_opinion =  10
+}
+
+sennatha_bride = {
+    shown_in_ruler_designer = no
+    health = medium_health_bonus
+    general_opinion =  10
+}
+
+sennatha_groom = {
+    shown_in_ruler_designer = no
+    health = medium_health_bonus
+    general_opinion =  10
+}
